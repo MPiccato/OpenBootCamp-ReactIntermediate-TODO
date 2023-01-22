@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import GreetingStyled from './components/pure/GreetingStyled';
 // import Greeting from './components/pure/Greeting';
 //import GreetingF from './components/pure/GreetingF';
 //import TaskListComponent from './components/container/task_list';
 //import Ejemplo1 from './hooks/Ejemplo1';
 //import Ejemplo2 from './hooks/Ejemplo2';
 //import MiComponenteConContexto from './hooks/Ejemplo3';
-import Ejemplo4 from './hooks/Ejemplo4';
+//import Ejemplo4 from './hooks/Ejemplo4';
 
 function App() {
   return (
@@ -27,12 +28,14 @@ function App() {
         {/* Ejemplo3 con useContext */}
         {/* <MiComponenteConContexto/> */}
         {/* Ejemplo4 uso de children */}
-        <Ejemplo4 nombre="Martin">
+        {/* <Ejemplo4 nombre="Martin">
           
           <h3>
             Contenido de props.children
           </h3>
-        </Ejemplo4>
+        </Ejemplo4> */}
+        {/* Stilos dentro del script */}
+        <GreetingStyled name="Martin" />
 
 
       </header>
