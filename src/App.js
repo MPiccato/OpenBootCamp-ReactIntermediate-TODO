@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 // import Greeting from './components/pure/Greeting';
-import GreetingF from './components/pure/GreetingF';
+//import GreetingF from './components/pure/GreetingF';
+import TaskListComponent from './components/container/task_list';
 
 function App() {
   return (
@@ -11,7 +12,10 @@ function App() {
         {/* Componente Greeting JSX */}
         {/* <Greeting name="Martin"/> */}
         {/* Componente funcional de Greeting */}
-        <GreetingF name="Martin"/>        
+        {/* <GreetingF name="Martin"/>         */}
+        
+          {/* Componente de listado de tareas  */}
+        <TaskListComponent/>
 
       </header>
     </div>
