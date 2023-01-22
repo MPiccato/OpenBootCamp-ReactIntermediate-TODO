@@ -10,7 +10,7 @@ const TaskListComponent = () => {
     return (
         <div>
             <div>
-                Your Task: 
+               <h1>Your Task</h1> 
             </div>
             {/* Aplicar un map para renderizar una lista */}
             <TaskComponent task={defaultTask}/>
