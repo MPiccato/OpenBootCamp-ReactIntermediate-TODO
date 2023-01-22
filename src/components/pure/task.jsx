@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {Task} from '../../models/task.class';
 import '../../styles/task.scss'
-
+import { LEVELS } from '../../models/levels.enum';
 const TaskComponent = ({ task }) => {
 
     useEffect(() => {
@@ -11,6 +11,47 @@ const TaskComponent = ({ task }) => {
             console.log(`Tarea ${task.name} está por desmontarse`)
         };
     }, [task]);
+
+    /**
+     * Function que retorna un badge dependiendo
+     * del nivel de la tarea
+     */
+    const taskLevelBadge = () => {
+        switch (task.level) {
+            case LEVELS.NORMAL:
+                return (
+                <h6 className='mb-0'> 
+                    <span className='badge bg-primary'>{task.level}</span>
+                </h6>)
+            case LEVELS.URGENT:
+                return(
+                    <h6 className='mb-0'>
+                        <span className='badge bg-warning'> {task.level}</span>
+                    </h6>
+                )
+            case LEVELS.BLOCKING:
+                return(
+                    <h6 className='mb-0'>
+                        <span className='badge bg-danger'>{task.level}</span>
+                    </h6>
+                )
+            default:
+                break;
+        }
+
+    }
+
+    /** Funcion para completar el icono que corresponde segun
+     * si se completo o no la tarea
+     */
+    const taskIconCompleted = () => {
+        if (task.completed) {
+            return (<i className='bi-toggle-on' style={{color: 'green', fontWeight:'bold'}}></i>)
+        } else {
+            return (<i className='bi-toggle-off' style={{color:'gray'}} ></i>)
+        }
+         
+    }
 
   return (
 
@@ -22,16 +63,14 @@ const TaskComponent = ({ task }) => {
             <span>{task.description}</span>
         </td>
         <td className='align-middle'>
-        {/* Sustituir por un badge */}
-            <span>{task.level}</span>
+            {/* Funcion que ejecuta el badge del elemento */}
+            {taskLevelBadge()}
         </td>
         <td className='align-middle'>
-        {/* Sustituir por iconos */}
-            {task.completed ?
-                (<i className='bi-toggle-on'></i>)
-                :
-                (<i className='bi-toggle-off'></i>)
-            }
+        
+            {/* Ejecucion de la funcion que dibuja el icono dependiendo del estado */}
+            {taskIconCompleted()}
+            <i className='bi-trash' style={{color:'tomato', fontSize:'17px'}}></i>
 
 
 

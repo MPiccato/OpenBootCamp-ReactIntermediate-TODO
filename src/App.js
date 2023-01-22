@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import GreetingStyled from './components/pure/GreetingStyled';
+//import GreetingStyled from './components/pure/GreetingStyled';
 // import Greeting from './components/pure/Greeting';
 //import GreetingF from './components/pure/GreetingF';
 import TaskListComponent from './components/container/task_list';
