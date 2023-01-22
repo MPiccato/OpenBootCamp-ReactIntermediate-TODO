@@ -3,7 +3,9 @@ import './App.css';
 // import Greeting from './components/pure/Greeting';
 //import GreetingF from './components/pure/GreetingF';
 //import TaskListComponent from './components/container/task_list';
-import Ejemplo1 from './hooks/Ejemplo1';
+//import Ejemplo1 from './hooks/Ejemplo1';
+//import Ejemplo2 from './hooks/Ejemplo2';
+import MiComponenteConContexto from './hooks/Ejemplo3';
 
 function App() {
   return (
@@ -18,7 +20,11 @@ function App() {
           {/* Componente de listado de tareas  */}
         {/* <TaskListComponent/> */}
         {/* Ejemplo de useState */}
-        <Ejemplo1/>
+        {/* <Ejemplo1/> */}
+        {/* Ejemplo 2 de uso de useState, useRef, useEffect */}
+        {/* <Ejemplo2/> */}
+        {/* Ejemplo3 con useContext */}
+        <MiComponenteConContexto/>
 
       </header>
     </div>
