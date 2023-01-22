@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 // Definiendo estilos en constantes
 
 const loggedStyle = {
-    color: 'blue'
+    color: 'white'
 };
 
 // ? Estilo para usuario no logueado
@@ -25,7 +25,13 @@ const GreetingStyled = (props) => {
 
     return (
         <div style= {logged ? loggedStyle : unLoggedStyle}>
-            <p>Hola, {props.name}</p>
+            {logged ? 
+                (<p>Hola, {props.name}</p>)
+                :
+                (<p>Por favor logueate</p>)    
+            }
+            
+            
             <button onClick={()=> setLogged(!logged)} >
                 {logged ? 'LogOut' : 'LogIn'}
             </button>
