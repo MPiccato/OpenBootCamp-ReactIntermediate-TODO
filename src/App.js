@@ -3,7 +3,7 @@ import './App.css';
 import GreetingStyled from './components/pure/GreetingStyled';
 // import Greeting from './components/pure/Greeting';
 //import GreetingF from './components/pure/GreetingF';
-//import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 //import Ejemplo1 from './hooks/Ejemplo1';
 //import Ejemplo2 from './hooks/Ejemplo2';
 //import MiComponenteConContexto from './hooks/Ejemplo3';
@@ -12,15 +12,15 @@ import GreetingStyled from './components/pure/GreetingStyled';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* Componente Greeting JSX */}
         {/* <Greeting name="Martin"/> */}
         {/* Componente funcional de Greeting */}
         {/* <GreetingF name="Martin"/>         */}
         
           {/* Componente de listado de tareas  */}
-        {/* <TaskListComponent/> */}
+        <TaskListComponent/>
         {/* Ejemplo de useState */}
         {/* <Ejemplo1/> */}
         {/* Ejemplo 2 de uso de useState, useRef, useEffect */}
@@ -35,10 +35,10 @@ function App() {
           </h3>
         </Ejemplo4> */}
         {/* Stilos dentro del script */}
-        <GreetingStyled name="Martin" />
+        {/* <GreetingStyled name="Martin" /> */}
 
 
-      </header>
+      {/* </header> */}
     </div>
   );
 }
