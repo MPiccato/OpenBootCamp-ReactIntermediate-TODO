@@ -12,6 +12,10 @@ class Greeting extends Component {
         }
 
     }
+
+    // Func for birthday
+
+   
     render() {
         return (
             <div>
@@ -21,15 +25,27 @@ class Greeting extends Component {
                 <h2>
                     tu edad es {this.state.age}
                 </h2>
+                <div>
+                    <button onClick={this.birthday}>Cumplir años</button>
+                </div>
             </div>
         );
     }
+    birthday = () => {
+        this.setState((prevState) => (
+            {
+                age: prevState.age + 1
+            }
+        ))
+    }
+
+    
 }
 
 
 Greeting.propTypes = {
     name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired
+    
 
 };
 
