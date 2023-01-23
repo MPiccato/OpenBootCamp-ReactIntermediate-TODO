@@ -1,9 +1,10 @@
 //import logo from './logo.svg';
 import './App.css';
+import Father from './components/container/Father';
 //import GreetingStyled from './components/pure/GreetingStyled';
 // import Greeting from './components/pure/Greeting';
 //import GreetingF from './components/pure/GreetingF';
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
 //import Ejemplo1 from './hooks/Ejemplo1';
 //import Ejemplo2 from './hooks/Ejemplo2';
 //import MiComponenteConContexto from './hooks/Ejemplo3';
@@ -20,7 +21,7 @@ function App() {
         {/* <GreetingF name="Martin"/>         */}
         
           {/* Componente de listado de tareas  */}
-        <TaskListComponent/>
+        {/* <TaskListComponent/> */}
         {/* Ejemplo de useState */}
         {/* <Ejemplo1/> */}
         {/* Ejemplo 2 de uso de useState, useRef, useEffect */}
@@ -36,6 +37,10 @@ function App() {
         </Ejemplo4> */}
         {/* Stilos dentro del script */}
         {/* <GreetingStyled name="Martin" /> */}
+
+        {/* Gestion de eventos */}
+
+        <Father />
 
 
       {/* </header> */}
